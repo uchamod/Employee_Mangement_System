@@ -1,8 +1,6 @@
 package com.example.employems.EmployeEntity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,9 +13,19 @@ import lombok.NoArgsConstructor;
 public class Employe {
 
     @Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)//this is for genetate id auto
     private int empId;
     private String empName;
     private String empAddress;
     private int empMobileNumber;
+
+    public String getEmpName(){
+        return empName;
+    }
+    public void setEmpName(String Name){
+        empName=Name;
+    }
+
+
 
 }
